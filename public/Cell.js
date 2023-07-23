@@ -21,9 +21,10 @@ class Cell {
   }
 
   getNewCellState(board) {
-    const neighbors = this.getAliveNeighbors();
+    const neighbors = this.getAliveNeighbors(board);
     if (this.isAlive && neighbors > 3) return true;
     if (this.isAlive && neighbors < 2) return false;
+    if (!this.isAlive && neighbors === 3) return true;
   }
 }
 

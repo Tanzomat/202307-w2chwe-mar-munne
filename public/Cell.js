@@ -28,7 +28,7 @@ class Cell {
   }
 
   updateState(board) {
-    this.isAlive = this.getNewCellState(board);
+    this.isAlive = this.getNewCellState(board) || this.isAlive;
   }
 }
 

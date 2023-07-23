@@ -1,4 +1,4 @@
-import Cell from "./cell";
+import Cell from "../Cell.js";
 
 const rows = 10;
 const columns = 10;
@@ -11,4 +11,6 @@ const board = new Array(rows).fill("").map((item, x) =>
 
 console.log(board);
 
-board.forEach((column) => column.forEach((cell) => cell.updateState()));
+board.forEach((column) => column.forEach((cell) => cell.updateState(board)));
+
+console.log(board);

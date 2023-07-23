@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-styles": "npx sass src/sass/index.scss styles.css",
+    "build-styles:dev": "npx sass src/sass/index.scss styles.css --watch"
   },
   "keywords": [],
   "author": "",

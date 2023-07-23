@@ -26,6 +26,10 @@ class Cell {
     if (this.isAlive && neighbors < 2) return false;
     if (!this.isAlive && neighbors === 3) return true;
   }
+
+  updateState(board) {
+    this.isAlive = this.getNewCellState(board);
+  }
 }
 
 export default Cell;

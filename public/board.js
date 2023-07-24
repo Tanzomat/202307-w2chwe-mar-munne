@@ -11,6 +11,8 @@ const board = new Array(rows).fill("").map((item, x) =>
 
 console.log(board);
 
+Cell.updateState(board);
+
 board.forEach((column) => column.forEach((cell) => cell.updateState(board)));
 
 console.log(board);
